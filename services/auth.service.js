@@ -57,8 +57,8 @@ const LoginService = async (data) => {
       user: user,
     };
 
-    const refreshToken = jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET);
-    const accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
+    const refreshToken = jwt.sign(payload, process.env.SECRET_KEY);
+    const accessToken = jwt.sign(payload, process.env.SECRET_KEY, {
       expiresIn: "100d",
     });
 
