@@ -17,8 +17,10 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(passport.initialize());
 
 const authRoutes = require("./routes/auth.routes");
+const eventsRoutes = require("./routes/events.routes");
 
 app.use("/api", authRoutes);
+app.use("/api", eventsRoutes);
 
 app.get("/", (req, res) => {
   res.send("<h1>Server is running</h1>");
