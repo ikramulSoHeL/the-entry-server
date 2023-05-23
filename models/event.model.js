@@ -45,6 +45,10 @@ const eventSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  vat: {
+    type: Number,
+    required: true,
+  },
   isActive: {
     type: Boolean,
     default: true,

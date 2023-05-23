@@ -18,9 +18,11 @@ app.use(passport.initialize());
 
 const authRoutes = require("./routes/auth.routes");
 const eventsRoutes = require("./routes/events.routes");
+const ticketRoutes = require("./routes/ticket.routes");
 
 app.use("/api", authRoutes);
 app.use("/api", eventsRoutes);
+app.use("/api", ticketRoutes);
 
 app.get("/", (req, res) => {
   res.send("<h1>Server is running</h1>");
