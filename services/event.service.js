@@ -16,6 +16,7 @@ const CreateEventService = async (data) => {
       organizerPhone,
       organizerWebsite,
       organizerDesc,
+      ticketPrice,
     } = data;
 
     const newEvent = new Event({
@@ -30,6 +31,7 @@ const CreateEventService = async (data) => {
       organizerPhone: organizerPhone,
       organizerWebsite: organizerWebsite,
       organizerDesc: organizerDesc,
+      ticketPrice: ticketPrice,
     });
     await newEvent.save();
 
@@ -91,6 +93,7 @@ const UpdateEventByIdService = async (id, data) => {
       organizerPhone,
       organizerWebsite,
       organizerDesc,
+      ticketPrice,
     } = data;
 
     event.title = title;
@@ -103,6 +106,7 @@ const UpdateEventByIdService = async (id, data) => {
     event.organizerPhone = organizerPhone;
     event.organizerWebsite = organizerWebsite;
     event.organizerDesc = organizerDesc;
+    event.ticketPrice = ticketPrice;
 
     await event.save();
 

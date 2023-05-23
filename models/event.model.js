@@ -41,6 +41,10 @@ const eventSchema = new mongoose.Schema({
   organizerDesc: {
     type: String,
   },
+  ticketPrice: {
+    type: Number,
+    required: true,
+  },
   isActive: {
     type: Boolean,
     default: true,
